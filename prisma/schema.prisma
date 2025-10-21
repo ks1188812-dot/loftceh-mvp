@@ -1,0 +1,70 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum LeadStatus {
+  NEW
+  IN_PROGRESS
+  WAIT_CUSTOMER
+  DONE
+  CANCELED
+}
+
+enum Category {
+  BEDS
+  DESKS
+  WARDROBES
+  SHELVES
+}
+
+model ProductModel {
+  id           String   @id @default(cuid())
+  name         String
+  slug         String   @unique
+  description  String?
+  basePrice    Int?
+  imageUrl     String?
+  category     Category
+  finishes     String[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  leads        LeadModel[]
+}
+
+model Lead {
+  id             String       @id @default(cuid())
+  customerName   String
+  phone          String
+  telegramUserId String?
+  telegramUsername String?
+  roomImageUrl   String
+  categories     Category[]
+  status         LeadStatus   @default(NEW)
+  adminNotes     String?
+  models         LeadModel[]
+  resultImages   ResultImage[]
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
+
+model LeadModel {
+  id         String       @id @default(cuid())
+  lead       Lead         @relation(fields: [leadId], references: [id])
+  leadId     String
+  model      ProductModel @relation(fields: [modelId], references: [id])
+  modelId    String
+}
+
+model ResultImage {
+  id        String   @id @default(cuid())
+  lead      Lead     @relation(fields: [leadId], references: [id])
+  leadId    String
+  url       String
+  createdAt DateTime @default(now())
+}
