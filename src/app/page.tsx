@@ -65,7 +65,7 @@ export default async function Page() {
                 style={{
                   position: 'relative',
                   width: '100%',
-                  height: 140,
+				  aspectRatio: '1 / 1', // квадрат
                   marginTop: 8,
                   borderRadius: 8,
                   overflow: 'hidden',
@@ -77,7 +77,7 @@ export default async function Page() {
                   fill
                   sizes="(max-width: 640px) 100vw, 300px"
                   style={{ objectFit: 'cover' }}
-                  quality={70}
+                  quality={80}
                 />
               </div>
             )}
