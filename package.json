@@ -9,7 +9,7 @@
     "prisma:generate": "prisma generate"
   },
   "dependencies": {
-    "@prisma/client": "^5.19.0",
+    "@prisma/client": "^5.22.0",
     "@supabase/supabase-js": "^2.45.4",
     "form-data": "^4.0.0",
     "next": "14.2.5",
@@ -21,7 +21,7 @@
     "@types/node": "^20.19.23",
     "@types/react": "^18.3.26",
     "@types/react-dom": "^18.3.7",
-    "prisma": "^5.19.0",
+    "prisma": "^5.22.0",
     "typescript": "^5.5.4"
   },
   "engines": {
