@@ -8,6 +8,9 @@
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev"
   },
+  "engines": {
+  "node": "20.x"
+}
   "dependencies": {
     "@prisma/client": "^5.19.0",
     "@supabase/supabase-js": "^2.45.4",
