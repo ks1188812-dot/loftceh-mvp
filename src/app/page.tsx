@@ -9,7 +9,7 @@ type ProductModel = {
 
 async function getModels(): Promise<ProductModel[]> {
   // SSR-запрос — без кеша (чтобы всегда видеть актуальный список)
-  const res = await fetch('https://loft-workshop.netlify.app/api/models', { cache: 'no-store' });
+  const res = await fetch('/api/models', { cache: 'no-store' });
   if (!res.ok) throw new Error('Failed to load models');
   return res.json();
 }
