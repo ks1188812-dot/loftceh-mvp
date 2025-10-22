@@ -21,9 +21,9 @@ const models: ProductModel[] = [
   { id: 'bed-c', name: 'Кровать Loft C', slug: 'bed-loft-c', description: 'С мягким изголовьем', basePrice: 38000, imageUrl: '/catalog/beds/loft-c.png', category: 'BEDS', finishes: ['ткань графит','ткань беж'] },
 
   // Стеллажи (3)
-  { id: 'shelf-grid', name: 'Стеллаж Grid', slug: 'shelf-grid', description: 'Металлокаркас 30×30', basePrice: 14500, imageUrl: '/catalog/shelves/grid.png', category: 'SHELVES', finishes: ['черный','белый'] },
-  { id: 'shelf-cube', name: 'Стеллаж Cube', slug: 'shelf-cube', description: 'Кубы из ЛДСП', basePrice: 16500, imageUrl: '/catalog/shelves/cube.png', category: 'SHELVES', finishes: ['дуб','орех'] },
-  { id: 'shelf-ladder', name: 'Стеллаж Ladder', slug: 'shelf-ladder', description: 'Лестница на стену', basePrice: 15500, imageUrl: '/catalog/shelves/ladder.png', category: 'SHELVES', finishes: ['черный','дуб'] },
+  { id: 'grid', name: 'Стеллаж Grid', slug: 'shelf-grid', description: 'Металлокаркас 30×30', basePrice: 14500, imageUrl: '/catalog/shelves/grid.png', category: 'SHELVES', finishes: ['черный','белый'] },
+  { id: 'cube', name: 'Стеллаж Cube', slug: 'shelf-cube', description: 'Кубы из ЛДСП', basePrice: 16500, imageUrl: '/catalog/shelves/cube.png', category: 'SHELVES', finishes: ['дуб','орех'] },
+  { id: 'ladder', name: 'Стеллаж Ladder', slug: 'shelf-ladder', description: 'Лестница на стену', basePrice: 15500, imageUrl: '/catalog/shelves/ladder.png', category: 'SHELVES', finishes: ['черный','дуб'] },
 
   // Столы (3)
   { id: 'desk-a', name: 'Стол Work A', slug: 'desk-work-a', description: 'П-образный каркас', basePrice: 19000, imageUrl: '/catalog/desks/work-a.png', category: 'DESKS', finishes: ['120×60','140×70'] },
