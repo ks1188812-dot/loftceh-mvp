@@ -102,7 +102,18 @@ export default function Configurator({ models }: { models: ProductModel[] }) {
                   />
                   <div style={{ fontWeight: 600 }}>{m.name}</div>
                 </div>
-				<Image
+				 {m.imageUrl && (
+              <div
+                style={{
+                  position: 'relative',
+                  width: '100%',
+                  height: 140,
+                  marginTop: 8,
+                  borderRadius: 8,
+                  overflow: 'hidden',
+                }}
+              >
+                <Image
                   src={m.imageUrl}
                   alt={m.name}
                   fill
@@ -110,6 +121,8 @@ export default function Configurator({ models }: { models: ProductModel[] }) {
                   style={{ objectFit: 'cover' }}
                   quality={70}
                 />
+              </div>
+            )}
                 <div style={{ fontSize: 12, opacity: 0.7 }}>{m.description}</div>
                 <div style={{ fontSize: 12, marginTop: 4 }}>
                   От {new Intl.NumberFormat('ru-RU').format(m.basePrice ?? 0)} ₽
