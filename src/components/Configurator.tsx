@@ -102,7 +102,7 @@ export default function Configurator({ models }: { models: ProductModel[] }) {
                   />
                   <div style={{ fontWeight: 600 }}>{m.name}</div>
                 </div>
-				 {m.imageUrl && (
+				 
               <div
                 style={{
                   position: 'relative',
@@ -122,7 +122,7 @@ export default function Configurator({ models }: { models: ProductModel[] }) {
                   quality={70}
                 />
               </div>
-            )}
+            
                 <div style={{ fontSize: 12, opacity: 0.7 }}>{m.description}</div>
                 <div style={{ fontSize: 12, marginTop: 4 }}>
                   От {new Intl.NumberFormat('ru-RU').format(m.basePrice ?? 0)} ₽
