@@ -1,0 +1,13 @@
+# deps & builds
+node_modules/
+.next/
+dist/
+out/
+build/
+.vercel/
+
+# env & прочее
+.env
+.env.*
+*.log
+.DS_Store
