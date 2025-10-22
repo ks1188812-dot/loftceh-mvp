@@ -1,5 +1,7 @@
-﻿import Image from 'next/image';
+﻿// src/app/page.tsx
+import Image from 'next/image';
 import { headers } from 'next/headers';
+import Configurator from '@/components/Configurator';
 
 type Category = 'BEDS' | 'DESKS' | 'SHELVES' | 'WARDROBES';
 type ProductModel = {
@@ -13,7 +15,7 @@ type ProductModel = {
   finishes: string[];
 };
 
-// SSR-запрос с абсолютным URL (для Vercel/production)
+// SSR-запрос с абсолютным URL (важно для Vercel/production)
 async function getModels(): Promise<ProductModel[]> {
   const h = headers();
   const proto = h.get('x-forwarded-proto') ?? 'https';
@@ -86,6 +88,9 @@ export default async function Page() {
           </li>
         ))}
       </ul>
+
+      {/* Интерактив: выбор моделей, загрузка фото и отправка в Telegram */}
+      <Configurator models={data} />
     </div>
   );
 }
